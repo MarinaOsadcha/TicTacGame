@@ -1,0 +1,124 @@
+﻿html,body {
+	margin:0;
+	padding:0;
+	height:100%;
+	font-family:arial;
+	color: rgb(250,250,250);
+	text-align:center;
+}
+div, table, footer, span {
+	box-sizing:border-box;
+}
+.container {
+	position:relative;
+	margin:auto;
+	min-height:100%;
+	width:100%;
+	padding-bottom:40px;    /*для футера внизу, чтобы не залазил на контент*/
+	background: rgb(89, 124, 133);
+}
+p {
+	margin:0;
+	padding:0;
+	padding-top:15px;
+}
+#quantity {padding-right:15px;}
+.players, p button,#reset {
+	margin-left:20px;
+	margin-right:20px;
+	width:130px;
+	border:none;
+	color: rgb(250,250,250);
+	outline: none;
+	background: transparent;
+	font-size: 11px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+span.players {
+	display:inline-block;
+	margin-left:0;
+	cursor: default;
+}
+.result {
+	padding:0;
+	padding-left:25px;
+	padding-bottom:10px;
+}
+.result span {
+	display:inline-block;
+	margin-left:40px;
+	margin-right:10px;
+	width:15px;
+	font-size: 15px;
+}
+#playerResult,#computerResult,#drawResult {
+	margin-left:0;
+	margin-right:90px;
+}
+#drawResult {
+	margin-left: 30px;
+}
+#choice {
+	padding-top:10px;
+}
+p button {
+	margin:0;
+	width:25px;
+	font-size:14px;
+}
+table {
+	position:relative;
+	margin:auto;
+	margin-top:50px;
+	margin-bottom:40px;    /*чтобы футер на налазил на контент выше при уменьшении высоты окна*/
+	border-collapse: collapse;
+	border: 5px solid rgb(89, 124, 133);
+} 
+td {
+	width: 120px;
+	height:120px;
+	border: 4px solid rgb(250,250,250);
+	font-size:80px;
+	cursor: pointer;
+	transition: 1s;    /*медленное изменение фона при выиграше*/
+}
+#reset {
+	position: absolute;
+	top: 18px;
+	right: 0;
+	font-size:11px;
+}
+footer {
+	position:absolute;
+	margin-top:0px;
+	height: 35px;
+	bottom:10px;
+	width:100%;
+	text-transform: uppercase;
+	padding-right:280px;
+}
+footer p {
+	font-size:11px;
+	letter-spacing:1px;
+}
+@media only screen and (max-width: 700px) {
+	#reset {position:relative; margin:auto;top:auto;}
+	table {margin-top:30px;margin-bottom:20px;}
+}
+@media only screen and (max-width: 515px) {
+	.players {width: 80px; margin-left:5px;margin-right:5px;padding:0;}
+	button.players {margin-right:20px;}
+	span.players {margin-left:-10px;}
+	#quantity {margin:0;padding-right:10px;padding-top:10px;}
+	#playerResult,#computerResult,#drawResult {margin-right:30px;}
+	.result {padding-right:60px;}
+	footer {padding-right:0}
+}
+@media only screen and (max-width: 400px) {
+	.result {padding:0;padding-right:0}
+	.result span {margin-left:20px;}
+	#playerResult,#computerResult {margin-right:40px;}
+	#quantity {padding-right:0;}
+	td {width: 100px;height:100px;font-size:60px;}
+}
